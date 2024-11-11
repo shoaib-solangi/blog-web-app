@@ -63,7 +63,6 @@ function Hero() {
         )}
       </div>
 
-      {/* Right Side - Text Content */}
       <div className="w-full md:w-1/2 text-white space-y-4 px-4 md:px-0">
         <h1 className="text-3xl md:text-4xl font-bold leading-tight">
           {blogData?.blogTitle}

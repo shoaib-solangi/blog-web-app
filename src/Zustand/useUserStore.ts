@@ -1,13 +1,13 @@
-// store/userStore.js
+// store/userStore.ts
 
 import { create } from "zustand";
 
 
+
 const useUserStore = create((set) => ({
-  user: null,
-  setUser: (user) => set({ user }),
-  clearUser : ()=> set({user : null})
-  
+  user: null, 
+  setUser: (user) => set({ user }), 
+  clearUser: () => set({ user: null }), 
 }));
 
 export default useUserStore;

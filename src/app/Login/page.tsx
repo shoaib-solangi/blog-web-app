@@ -6,17 +6,15 @@ import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { app } from "@/firebase/firebaseConfig";
 import useAuth from "../useAuth/useAuth";
-import { useToast } from "@/hooks/use-toast";
-import { Toast } from "@/components/ui/toast";
 function Page(){
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const user  = useAuth();
   const route = useRouter();
-  const {toast} = useToast();
+  
 
 
-  const submitHandle = async(e:any)=>{
+  const submitHandle = async(e)=>{
     e.preventDefault();
 
     const auth = getAuth(app);
@@ -25,9 +23,7 @@ await signInWithEmailAndPassword(auth, email, password)
 if (user) {
   route.push('/');
   
-  toast({
-    title: "Login successfully!",
-  })
+  
 } 
 } catch (error) {
 console.error(error);

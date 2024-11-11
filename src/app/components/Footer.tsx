@@ -1,5 +1,6 @@
 "use client";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 function Footer() {
@@ -60,24 +61,22 @@ function Footer() {
             </div>
 
             <div className="flex justify-center space-x-6 mt-4 mb-8">
-              <a href="#" className="hover:text-blue-400">
-                 <span>Facebook</span>
-                 <Facebook />
-              </a>
-              <a href="#" className="hover:text-blue-500">
-                 <span>Twitter</span>
-                 <Twitter />
-              </a>
-              <a href="#" className="hover:text-red-500">
-                 <span>Instagram</span>
-                 <Instagram />
-
-              </a>
-              <a href="#" className="hover:text-blue-600">
-                 <span>LinkedIn</span>
-                 <Linkedin />
-
-              </a>
+              <Link href="#" className="hover:text-blue-400">
+                <span>Facebook</span>
+                <Facebook />
+              </Link>
+              <Link href="#" className="hover:text-blue-500">
+                <span>Twitter</span>
+                <Twitter />
+              </Link>
+              <Link href="#" className="hover:text-red-500">
+                <span>Instagram</span>
+                <Instagram />
+              </Link>
+              <Link href="#" className="hover:text-blue-600">
+                <span>LinkedIn</span>
+                <Linkedin />
+              </Link>
             </div>
 
             <div className="border-t border-gray-700 pt-4 text-center">

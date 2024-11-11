@@ -12,7 +12,7 @@ const useAuth = () => {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
-        setUser(user); // Save the user in Zustand
+        setUser(user); 
       } else {
         
       }
