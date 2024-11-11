@@ -14,13 +14,12 @@ function Hero() {
     blogTitle: string;
     blogDes: string;
     blogUrl: string;
-    time: string; // Change to string to store formatted date
+    time: string;
   }
 
   const [blogData, setBlogData] = useState<BlogData | null>(null);
   const params = useParams();
-  const encodedId = params?.id;
-  const id = encodedId ? decodeURIComponent(encodedId) : null;
+  const id = Array.isArray(params?.id) ? params.id[0] : params?.id ? decodeURIComponent(params.id) : null;
   const db = getFirestore(app);
 
   useEffect(() => {
@@ -31,7 +30,7 @@ function Hero() {
 
         if (BlogSnapshot.exists()) {
           const data = BlogSnapshot.data();
-          const formattedTime = data.timestamp.toDate().toLocaleDateString(); // Format the timestamp
+          const formattedTime = data.timestamp.toDate().toLocaleDateString();
           const fetchedBlogData: BlogData = {
             id: BlogSnapshot.id,
             email: data.authorEmail,
