@@ -6,7 +6,7 @@ import { create } from "zustand";
 
 const useUserStore = create((set) => ({
   user: null, 
-  setUser: (user) => set({ user }), 
+  setUser: (user: string) => set({ user }), 
   clearUser: () => set({ user: null }), 
 }));
 
