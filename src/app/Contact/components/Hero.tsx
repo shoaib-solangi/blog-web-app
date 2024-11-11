@@ -27,7 +27,7 @@ function Hero() {
             <Input placeholder="Name" className="w-full" />
             <Input placeholder="Email" type="email" className="w-full" />
             <Input placeholder="Phone no" type="tel" className="w-full" />
-            <Input placeholder="Message" className="w-full h-24" as="textarea" />
+            <Input placeholder="Message" className="w-full h-24"  />
             <Button className="w-full bg-blue-600 text-white hover:bg-blue-700">Send</Button>
           </div>
         </div>
