@@ -90,7 +90,7 @@ const handleFile = (e)=>{
           <Input onChange={(e)=>setBlogDescription(e.target.value)}
            placeholder="Enter blog Description"
             className="mt-2 w-[600px] max-w-full p-2 border border-blueGray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white"
-            as = "textarea"
+            
           />
           <label className="block mb-4 mt-2">
             <span className="text-white font-semibold ">Blog Categ</span>
