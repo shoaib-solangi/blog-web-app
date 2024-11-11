@@ -3,7 +3,7 @@
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import React, { useState } from "react";
+import React, { FormEvent, useState } from "react";
 import { app } from "@/firebase/firebaseConfig";
 import useAuth from "../useAuth/useAuth";
 function Page(){
@@ -14,7 +14,7 @@ function Page(){
   
 
 
-  const submitHandle = async(e)=>{
+  const submitHandle = async(e: FormEvent)=>{
     e.preventDefault();
 
     const auth = getAuth(app);
