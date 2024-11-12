@@ -20,9 +20,9 @@ function Navbar() {
     clearUser: () => void;
   }
   const clearUser = useUserStore((state: UserStoreState) => state.clearUser);
+  
 
-  const id: string | undefined = user?.uid;
-
+  
 
   
   
@@ -30,7 +30,7 @@ function Navbar() {
   useEffect(() => {
     const ready = async ()=>{
       if(user){
-      const docRef = doc(db , "user" , id)
+      const docRef = doc(db , "user" , user)
       const dataRef = await getDoc(docRef)
       console.log(dataRef);
       

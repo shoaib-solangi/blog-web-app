@@ -15,7 +15,7 @@ const useAuth = () => {
       console.log(user);
       
       if (user) {
-        setUser(user); 
+        setUser(user.uid); 
       } else {
         
       }
