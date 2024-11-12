@@ -14,12 +14,8 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dataUser, setDataUser] = useState(null)
   const user = useAuth();
-  interface UserStoreState {
-    user: string | null;
-    setUser: (user: string | null) => void;
-    clearUser: () => void;
-  }
-  const clearUser = useUserStore((state: UserStoreState) => state.clearUser);
+  
+  const {clearUser} = useUserStore();
   
 
   

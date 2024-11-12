@@ -5,7 +5,7 @@ import { getAuth } from 'firebase/auth';
 import { useEffect } from 'react';
 
 const useAuth = () => {
-  const setUser = useUserStore((state) => state.setUser);
+  const {setUser} = useUserStore();
   
 
   const auth = getAuth(app)
